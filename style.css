@@ -68,8 +68,7 @@
 }
 
 .task-add__button--add {
-  background-color: #4CAF50;
-  color: white;
+  color: #888;
 }
 
 .task-list {
@@ -136,4 +135,81 @@
 .task--editing .task__input {
   display: inline-block;
   width: 224px;
+}
+
+h3,
+label[for="new__task"] {
+  color: #333;
+  font-weight: 700;
+  font-size: 15px;
+  border-bottom: 2px solid #333;
+  padding: 30px 0 10px;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+input[type="text"]:focus {
+  color: #333;
+}
+
+/* task list */
+
+li {
+  overflow: hidden;
+  padding: 20px 0;
+  border-bottom: 1px solid #eee;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+li>* {
+  vertical-align: middle;
+}
+
+li>input[type="checkbox"] {
+  margin: 0 10px;
+}
+
+li>label {
+  padding-left: 10px;
+  box-sizing: border-box;
+  font-size: 18px;
+  width: 226px;
+}
+
+li>input[type="text"] {
+  width: 226px;
+}
+
+button.delete img {
+  height: 2em;
+  transform: rotateZ(45deg);
+  transition: transform 200ms ease-in;
+}
+
+button.delete img:hover {
+  transform: rotateZ(0);
+}
+
+/* completed */
+ul#completed__tasks label {
+  text-decoration-line: line-through;
+  text-decoration-color: #888;
+  text-decoration-style: solid;
+}
+
+/* edit task */
+ul li input[type=text] {
+  display: none;
+}
+
+ul li.edit__mode input[type=text] {
+  display: inline-block;
+  width: 224px;
+}
+
+ul li.edit__mode label {
+  display: none;
 }
