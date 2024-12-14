@@ -11,15 +11,15 @@
   text-align: right;
 }
 
-.header img {
+.header__image {
   width: 100%;
 }
 
-.header .more-info {
+.header__more-info {
   font-family: fantasy, cursive;
 }
 
-@media (max-width:768px) {
+@media (max-width: 768px) {
   .header {
     text-align: center;
   }
@@ -30,47 +30,11 @@
   margin: 0 auto;
 }
 
-.task-input {
-  width: 56%;
-  display: inline-block;
-  flex-grow: 1;
+.task-add {
+  margin: 20px 0;
 }
 
-.task-row {
-  display: flex;
-}
-
-.list {
-  margin: 0;
-  padding: 0;
-}
-
-.task,
-.title {
-  list-style: none;
-}
-
-.input,
-.button {
-  outline: none;
-}
-
-.button {
-  background: none;
-  border: 0;
-  color: #888;
-  font-size: 15px;
-  width: 60px;
-  cursor: pointer;
-}
-
-.button:hover {
-  color: #3a3a3a;
-}
-
-/* heading */
-.title,
-label[for="new-task"] {
+.task-add__label {
   color: #333;
   font-weight: 700;
   font-size: 15px;
@@ -80,32 +44,39 @@ label[for="new-task"] {
   text-transform: uppercase;
 }
 
-.input[type="text"] {
-  margin: 0;
-  font-size: 18px;
-  padding: 0 9px;
-  border: 1px solid #ddd;
-  background: #fff;
-  border-radius: 6px;
-  font-family: lato, sans-serif;
+.task-add__row {
+  display: flex;
+}
+
+.task-add__input {
+  width: 56%;
+  display: inline-block;
+  flex-grow: 1;
+}
+
+.task-add__button {
+  background: none;
+  border: 0;
   color: #888;
+  font-size: 15px;
+  width: 60px;
+  cursor: pointer;
 }
 
-.input[type="text"]:focus {
-  color: #333;
+.task-add__button:hover {
+  color: #3a3a3a;
 }
 
-/* new task */
-label[for="new-task"] {
-  display: block;
-  margin: 0 0 20px;
+.task-add__button--add {
+  background-color: #4CAF50;
+  color: white;
 }
 
-.input#new-task {
-  width: 318px;
+.task-list {
+  margin: 0;
+  padding: 0;
 }
 
-/* task list */
 .task {
   overflow: hidden;
   padding: 20px 0;
@@ -115,52 +86,54 @@ label[for="new-task"] {
   align-items: center;
 }
 
-.task>* {
-  vertical-align: middle;
-}
-
-.task .input[type="checkbox"] {
+.task__checkbox {
   margin: 0 10px;
 }
 
-.task label {
+.task__label {
   padding-left: 10px;
   font-size: 18px;
   width: 226px;
 }
 
-.task .input[type="text"] {
+.task__input {
   width: 226px;
 }
 
-.button.delete img {
+.task__button {
+  background: none;
+  border: 0;
+  color: #888;
+  font-size: 15px;
+  width: 60px;
+  cursor: pointer;
+}
+
+.task__button:hover {
+  color: #3a3a3a;
+}
+
+.task__button-image {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
 
-.button.delete img:hover {
+.task__button--delete:hover .task__button-image {
   transform: rotateZ(0);
 }
 
-/* completed */
-.list#completed-tasks .task.completed label {
+/* task state modifiers */
+.task--completed .task__label {
   text-decoration: line-through;
   color: #888;
 }
 
-/* edit task */
-.list .task input[type="text"] {
+.task--editing .task__label {
   display: none;
 }
 
-.list .task.editing .input[type="text"] {
+.task--editing .task__input {
   display: inline-block;
   width: 224px;
 }
-
-.list .task.editing label {
-  display: none;
-}
-
-/* push Separate selectors and properties */
