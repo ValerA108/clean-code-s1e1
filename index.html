@@ -12,7 +12,7 @@
       media="screen"
     >
   </head>
-  <body>
+  <body class="page">
     <div class="header">
       <img src="./eisenhower-matrix.jpg" alt="Eisenhower Matrix">
       <a
@@ -31,19 +31,19 @@
             class="task-input"
             type="text"
           >
-          <button class="add">add</button>
+          <button class="button add">add</button>
         </div>
       </p>
-      <h3>todo</h3>
-      <ul id="incomplete-tasks">
+      <h3 class="title">todo</h3>
+      <ul id="incomplete-tasks" class="list">
         <li class="task">
           <input type="checkbox">
           <label>pay bills</label>
           <input
             type="text"
           >
-          <button class="edit">edit</button>
-          <button class="delete">
+          <button class="button edit">edit</button>
+          <button class="button delete">
             <img src="./remove.svg" alt="delete">
           </button>
         </li>
@@ -54,14 +54,14 @@
             type="text"
             value="go shopping"
           >
-          <button class="save">save</button>
-          <button class="delete">
+          <button class="button save">save</button>
+          <button class="button delete">
             <img src="./remove.svg" alt="delete">
           </button>
         </li>
       </ul>
-      <h3>completed</h3>
-      <ul id="completed-tasks">
+      <h3 class="title">completed</h3>
+      <ul id="completed-tasks" class="list">
         <li class="task completed">
           <input
             type="checkbox"
@@ -71,8 +71,8 @@
           <input
             type="text"
           >
-          <button class="edit">edit</button>
-          <button class="delete">
+          <button class="button edit">edit</button>
+          <button class="button delete">
             <img
               src="./remove.svg"
               alt="delete"
