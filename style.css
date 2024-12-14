@@ -162,3 +162,5 @@ label[for="new-task"] {
 .list .task.editing label {
   display: none;
 }
+
+/* push Separate selectors and properties */
