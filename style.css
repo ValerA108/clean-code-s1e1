@@ -2,7 +2,7 @@
 .page {
   background-color: #f8f8f8;
   color: #333;
-  font-family: l, sans-serif;
+  font-family: lato, sans-serif;
 }
 
 .header {
@@ -44,14 +44,28 @@
   text-transform: uppercase;
 }
 
+.item {
+  margin-bottom: 20px;
+}
+
 .task-add__row {
   display: flex;
 }
 
 .task-add__input {
-  width: 56%;
   display: inline-block;
   flex-grow: 1;
+  width: 56%;
+  margin: 0;
+  font-size: 18px;
+  line-height: 18px;
+  height: 21px;
+  padding: 0 9px;
+  border: 1px solid #dDd;
+  background: #FFF;
+  border-radius: 6px;
+  font-family: Lato, sans-serif;
+  color: #888;
 }
 
 .task-add__button {
@@ -208,6 +222,10 @@ ul li input[type=text] {
 ul li.edit__mode input[type=text] {
   display: inline-block;
   width: 224px;
+  border: 1px solid #dDd;
+  background: #FFF;
+  border-radius: 6px;
+  color: #888;
 }
 
 ul li.edit__mode label {

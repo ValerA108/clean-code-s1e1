@@ -27,9 +27,15 @@
 
     <main class="main">
       <section class="task-add">
-        <label for="new-task" class="task-add__label">add item</label>
+        <h3 class="title item">add item</h3>
+        <label for="new-task" class="task-add__label"></label>
         <div class="task-add__row">
-          <input id="new-task" class="task-add__input" type="text" />
+          <input
+            title="checkbox"
+            id="new-task"
+            class="task-add__input"
+            type="text"
+          />
           <button type="button" class="task-add__button task-add__button--add">
             add
           </button>
@@ -44,6 +50,26 @@
           <input title="text" type="text" class="task__input" />
           <button type="button" class="task__button task__button--edit">
             edit
+          </button>
+          <button type="button" class="task__button task__button--delete">
+            <img
+              class="task__button-image"
+              src="./remove.svg"
+              alt="delete task"
+            />
+          </button>
+        </li>
+        <li class="task edit__mode">
+          <input title="checkbox" type="checkbox" class="task__checkbox" />
+          <label class="task__label"></label>
+          <input
+            title="text"
+            value="go shopping"
+            type="text"
+            class="task__input"
+          />
+          <button type="button" class="task__button task__button--edit">
+            save
           </button>
           <button type="button" class="task__button task__button--delete">
             <img
