@@ -13,7 +13,7 @@
     >
   </head>
   <body class="page">
-    <div class="header">
+    <header class="header">
       <img src="./eisenhower-matrix.jpg" alt="Eisenhower Matrix">
       <a
         class="more-info"
@@ -21,9 +21,10 @@
       >
         want more details?
       </a>
-    </div>
-    <div class="main">
-      <p id="task-add">
+    </header>
+    
+    <main class="main">
+      <section id="task-add">
         <label for="new-task">add item</label>
         <div class="task-row">
           <input
@@ -33,7 +34,8 @@
           >
           <button class="button add">add</button>
         </div>
-      </p>
+      </section>
+
       <h3 class="title">todo</h3>
       <ul id="incomplete-tasks" class="list">
         <li class="task">
@@ -60,6 +62,7 @@
           </button>
         </li>
       </ul>
+
       <h3 class="title">completed</h3>
       <ul id="completed-tasks" class="list">
         <li class="task completed">
@@ -80,7 +83,8 @@
           </button>
         </li>
       </ul>
-    </div>
+    </main>
+
     <script src="app.js"></script>
   </body>
 </html>
